@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Material Sharing</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">📚 StudyShare</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#materials">Materials</a></li>
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <button id="darkModeBtn">🌙</button>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <h1>Study Material Sharing Website</h1>
+
+            <p>
+                Share, discover and download study materials easily.
+            </p>
+
+            <a href="#materials" class="btn">Explore Materials</a>
+        </div>
+
+    </section>
+
+
+    <!-- Search Section -->
+    <section class="search-section">
+
+        <h2>Find Study Materials</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search materials..."
+        >
+
+        <select id="categoryFilter">
+            <option value="all">All Subjects</option>
+            <option value="Programming">Programming</option>
+            <option value="Cyber Security">Cyber Security</option>
+            <option value="Database">Database</option>
+            <option value="Networking">Networking</option>
+            <option value="Web Development">Web Development</option>
+        </select>
+
+    </section>
+
+
+    <!-- Materials Section -->
+    <section id="materials" class="materials">
+
+        <h2>Available Study Materials</h2>
+
+        <div id="materialContainer" class="material-container">
+
+            <!-- Card 1 -->
+            <div class="material-card"
+                 data-title="Python Programming Notes"
+                 data-category="Programming">
+
+                <div class="icon">🐍</div>
+
+                <h3>Python Programming Notes</h3>
+
+                <p>Basic Python programming concepts and examples.</p>
+
+                <span>Programming</span>
+
+                <button class="download-btn"
+                        onclick="downloadMaterial('Python Programming Notes')">
+                    Download
+                </button>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="material-card"
+                 data-title="Cyber Security Fundamentals"
+                 data-category="Cyber Security">
+
+                <div class="icon">🔐</div>
+
+                <h3>Cyber Security Fundamentals</h3>
+
+                <p>Introduction to cybersecurity concepts and attacks.</p>
+
+                <span>Cyber Security</span>
+
+                <button class="download-btn"
+                        onclick="downloadMaterial('Cyber Security Fundamentals')">
+                    Download
+                </button>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="material-card"
+                 data-title="DBMS Notes"
+                 data-category="Database">
+
+                <div class="icon">🗄️</div>
+
+                <h3>DBMS Notes</h3>
+
+                <p>Database management system notes and SQL concepts.</p>
+
+                <span>Database</span>
+
+                <button class="download-btn"
+                        onclick="downloadMaterial('DBMS Notes')">
+                    Download
+                </button>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="material-card"
+                 data-title="Computer Networks"
+                 data-category="Networking">
+
+                <div class="icon">🌐</div>
+
+                <h3>Computer Networks</h3>
+
+                <p>Networking concepts, protocols and diagrams.</p>
+
+                <span>Networking</span>
+
+                <button class="download-btn"
+                        onclick="downloadMaterial('Computer Networks')">
+                    Download
+                </button>
+
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="material-card"
+                 data-title="HTML CSS JavaScript"
+                 data-category="Web Development">
+
+                <div class="icon">💻</div>
+
+                <h3>HTML CSS JavaScript</h3>
+
+                <p>Web development notes with examples.</p>
+
+                <span>Web Development</span>
+
+                <button class="download-btn"
+                        onclick="downloadMaterial('HTML CSS JavaScript')">
+                    Download
+                </button>
+
+            </div>
+
+        </div>
+
+        <p id="noResults">No materials found.</p>
+
+    </section>
+
+
+    <!-- Upload Section -->
+    <section id="upload" class="upload-section">
+
+        <h2>Share Study Material</h2>
+
+        <form id="uploadForm">
+
+            <input
+                type="text"
+                id="materialName"
+                placeholder="Material Name"
+                required
+            >
+
+            <select id="subject" required>
+
+                <option value="">Select Subject</option>
+                <option value="Programming">Programming</option>
+                <option value="Cyber Security">Cyber Security</option>
+                <option value="Database">Database</option>
+                <option value="Networking">Networking</option>
+                <option value="Web Development">Web Development</option>
+
+            </select>
+
+            <textarea
+                id="description"
+                placeholder="Material Description"
+                required>
+            </textarea>
+
+            <input
+                type="file"
+                id="file"
+                required
+            >
+
+            <button type="submit" class="btn">
+                Upload Material
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+
+        <h2>About StudyShare</h2>
+
+        <p>
+            StudyShare is a simple platform where students can
+            share and access useful study materials, notes and
+            learning resources.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 StudyShare | Student Study Material Platform</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

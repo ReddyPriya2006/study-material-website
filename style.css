@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* Navigation */
+
+header {
+    background: #182848;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ffd166;
+}
+
+#darkModeBtn {
+    background: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #182848,
+        #4b6cb7
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+
+    background: #ffd166;
+    color: #222;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ffb703;
+}
+
+
+/* Search */
+
+.search-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+}
+
+#searchInput,
+#categoryFilter {
+    padding: 12px;
+
+    margin: 5px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+#searchInput {
+    width: 300px;
+}
+
+
+/* Materials */
+
+.materials {
+    padding: 50px 7%;
+
+    text-align: center;
+}
+
+.materials h2 {
+    margin-bottom: 30px;
+}
+
+.material-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* Cards */
+
+.material-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.material-card h3 {
+    margin-bottom: 12px;
+}
+
+.material-card p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.material-card span {
+    display: inline-block;
+
+    background: #e7f0ff;
+
+    color: #3155a6;
+
+    padding: 6px 10px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #3155a6;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: #182848;
+}
+
+#noResults {
+    display: none;
+
+    margin-top: 30px;
+
+    color: red;
+}
+
+
+/* Upload */
+
+.upload-section {
+    background: #eaf0ff;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+.upload-section h2 {
+    margin-bottom: 25px;
+}
+
+#uploadForm {
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+#uploadForm input,
+#uploadForm select,
+#uploadForm textarea {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+#uploadForm textarea {
+    height: 100px;
+
+    resize: none;
+}
+
+
+/* About */
+
+.about {
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+
+    margin: 15px auto;
+
+    line-height: 1.7;
+}
+
+
+/* Footer */
+
+footer {
+    background: #182848;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* Dark Mode */
+
+body.dark {
+    background: #121212;
+
+    color: white;
+}
+
+body.dark .material-card {
+    background: #1e1e1e;
+}
+
+body.dark .material-card p {
+    color: #ccc;
+}
+
+body.dark .search-section {
+    background: #121212;
+}
+
+body.dark .about {
+    background: #121212;
+}
+
+body.dark .upload-section {
+    background: #1c1c1c;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    #searchInput {
+        width: 90%;
+    }
+
+}
